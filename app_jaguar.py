@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np 
 import seaborn as sns
+import matplotlib.plyplot as ptl
 
 st.set_page_config(page_title="Monitoreo y Riesgo - Panthera Onca", layout="wide")
 
