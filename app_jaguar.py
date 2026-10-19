@@ -6,7 +6,7 @@ import matplotlib.plyplot as ptl
 
 st.set_page_config(page_title="Monitoreo y Riesgo - Panthera Onca", layout="wide")
 
-st.title("🐾 Dashboard de Monitoreo y Auditoría Ética: Panthera onca")
+st.title(" Dashboard de Monitoreo y Auditoría Ética: Panthera onca")
 st.markdown("### Proyecto de Recuperación y Mejora Continua en Ciencia de Datos")
 
 # Sidebar
@@ -26,14 +26,14 @@ data = pd.DataFrame({
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("🗺️ Mapa / Gráfico de Riesgo Antropogénico")
+    st.subheader(" Mapa / Gráfico de Riesgo Antropogénico")
     fig, ax = plt.subplots(figsize=(6, 4))
     sns.scatterplot(data=data, x='Distancia_Carreteras', y='NDVI_Vegetacion', hue='Nivel_Riesgo', palette='Set1', ax=ax)
     ax.set_title("Relación NDVI vs. Distancia a Carreteras")
     st.pyplot(fig)
 
 with col2:
-    st.subheader("⚖️ Resultados de Auditoría Ética (Sesgo)")
+    st.subheader(" Resultados de Auditoría Ética (Sesgo)")
     fig2, ax2 = plt.subplots(figsize=(6, 4))
     sns.countplot(data=data, x='Nivel_Riesgo', palette='viridis', ax=ax2)
     ax2.set_title("Distribución de Muestreos por Nivel de Riesgo")
